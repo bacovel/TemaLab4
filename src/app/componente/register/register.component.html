@@ -1,0 +1,35 @@
+<div class="form">
+    <form class="form-container" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <h2>Register form</h2>
+        <div class="top-part">
+            <span class="p-float-label">
+                <input  id="float-input" type="text" formControlName="firstName" pInputText> 
+                <label for="float-input">First name</label>
+            </span>
+            <span class="p-float-label">
+                <input id="float-input" type="text" formControlName="lastName" pInputText> 
+                <label for="float-input">Last name</label>
+            </span>
+        </div>
+        <div class="mid-part">
+            <span class="p-float-label">
+                <input id="float-input" type="email" formControlName="email" pInputText> 
+                <label for="float-input">Email</label>
+            </span>
+            <span class="p-float-label">
+                <input id="float-input" type="text" formControlName="phoneNumber" pInputText> 
+                <label for="float-input">Phone Number</label>
+            </span>
+        </div>
+        
+        <div class=" bottom-part">
+            <span class="p-float-label">
+                <p-password id="inputtext" formControlName="password" [showClear]="true" [toggleMask]="true" ></p-password>
+                <label for="inputtext">Password</label>
+            </span>
+        </div>
+        <button pButton type="submit" [disabled]="!form.valid" class="p-button-raised p-button-rounded w-full">Register</button>
+        
+    </form>
+    
+</div>
